@@ -5,11 +5,38 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Document</title>
+        <style>
+        .box{
+
+            width: 850px;
+            height: 300px;
+            border: 8px solid purple;
+            padding: 4px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            box-shadow: 5px 5px 20px green;
+            background-color: aqua;
+        }
+    </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="box">
+            <h1>Kartu Tanda Mahasiswa</h1>
+            <hr/>
+            NAMA :<l th:text="${psket1}"></l>
+            <br/><br/></br>
+            NIM :<l th:text="${paket2}"></l>
+            <br/><br/></br>
+            PRODI :<l th:text="${paket3}"></l>
+            <br/><br/></br>
+            EMAIL :<l th:text="${paket4}"></l>
+            <br/><br/></br>
+            IMAGE :<img th:src="${paket5}">    
+        
+        </div>
     </body>
 </html>
