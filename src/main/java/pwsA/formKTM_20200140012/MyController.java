@@ -19,14 +19,15 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 public class MyController {
     @RequestMapping("/take")
-    public String next(@RequestParam(value = "nama") String isiPertama,
+    public String next(
+            @RequestParam(value = "nama") String isiPertama,
             @RequestParam(value = "nim") String isiKedua,
             @RequestParam(value = "prodi") String isiKetiga,
-            @RequestParam(value = "email") String isiKeempat,
+            @RequestParam(value = "emaill") String isiKeempat,
             @RequestParam(value ="pic") MultipartFile isiKelima,
             Model kurir)
     throws IOException{
-        byte[] img = isiKetiga.getBytes();
+        byte[] img = isiKelima.getBytes();
         String base64Image = Base64.encodeBase64String(img);
         String imglink ="data:image/png;base64,".concat(base64Image);
         kurir.addAttribute("paket1",isiPertama);
